@@ -39,9 +39,11 @@ spring:
 imooc:
   security:
     browser:
+    # 登录页面
 #      loginPage: /demo-signIn.html
 #      loginType: REDIRECT
       loginType: JSON
+      # 注册页面
       signUpUrl: /demo-signUp.html
     code:
       image:
