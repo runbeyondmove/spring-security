@@ -19,7 +19,11 @@ public class AbstractChannelSecurityConfig extends WebSecurityConfigurerAdapter 
     @Autowired
     private AuthenticationFailureHandler myAuthenticationFailureHandler;
 
-
+    /**
+     * 密码验证相关配置
+     * @param http
+     * @throws Exception
+     */
     protected void applyPasswordAuthenticationConfig(HttpSecurity http) throws Exception {
         http.formLogin()
                 .loginPage(SecurityConstants.DEFAULT_UNAUTHENTICATION_URL)

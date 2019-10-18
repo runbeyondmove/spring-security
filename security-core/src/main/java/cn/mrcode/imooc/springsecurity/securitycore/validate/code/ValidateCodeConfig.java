@@ -11,7 +11,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * ${desc}
+ * 验证码配置
+ *
  * @author zhuqiang
  * @version 1.0.1 2018/8/4 11:36
  * @date 2018/8/4 11:36

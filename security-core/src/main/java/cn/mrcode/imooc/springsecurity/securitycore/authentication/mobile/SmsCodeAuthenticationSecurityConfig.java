@@ -33,6 +33,7 @@ public class SmsCodeAuthenticationSecurityConfig
         SmsCodeAuthenticationFilter filter = new SmsCodeAuthenticationFilter();
         // 这两个设置参数 不知道从哪里来的
         // 难道是要去看一个源码？
+        // http.getSharedObject(AuthenticationManager.class) 获取共享的认证管理器
         filter.setAuthenticationManager(http.getSharedObject(AuthenticationManager.class));
         filter.setAuthenticationFailureHandler(authenticationFailureHandler);
         filter.setAuthenticationSuccessHandler(authenticationSuccessHandler);

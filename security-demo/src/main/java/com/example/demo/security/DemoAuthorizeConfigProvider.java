@@ -7,12 +7,14 @@ import org.springframework.security.config.annotation.web.configurers.Expression
 import org.springframework.stereotype.Component;
 
 /**
+ * 权限配置
+ *
  * @author : zhuqiang
  * @version : V1.0
  * @date : 2018/8/12 21:25
  */
 @Component
-@Order(Integer.MAX_VALUE)
+@Order(Integer.MAX_VALUE)  // 注意优先级要比通用的权限配置低，值越高优先级越低
 public class DemoAuthorizeConfigProvider implements AuthorizeConfigProvider {
     @Override
     public void config(ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry config) {

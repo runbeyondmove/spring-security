@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.builders.InMemoryClientDetailsServiceBuilder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
@@ -98,6 +99,7 @@ public class MyAuthorizationServerConfig extends AuthorizationServerConfigurerAd
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
         // 这里使用什么密码需要 根据上面配置client信息里面的密码类型决定
         // 目前上面配置的是无加密的密码
-        security.passwordEncoder(NoOpPasswordEncoder.getInstance());
+        // security.passwordEncoder(NoOpPasswordEncoder.getInstance());
+        security.passwordEncoder(new BCryptPasswordEncoder());
     }
 }
