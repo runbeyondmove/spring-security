@@ -10,7 +10,7 @@ import org.springframework.web.context.request.ServletWebRequest;
 import java.util.Map;
 
 /**
- * ${desc}
+ * 验证码处理 公共功能，使用模版方法模式聚合公共逻辑
  * @author zhuqiang
  * @version 1.0.1 2018/8/4 15:33
  * @date 2018/8/4 15:33
@@ -100,5 +100,11 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
         validateCodeRepository.save(request, code, getValidateCodeType());
     }
 
+    /**
+     * 发送
+     * @param request
+     * @param validateCode
+     * @throws Exception
+     */
     public abstract void send(ServletWebRequest request, C validateCode) throws Exception;
 }

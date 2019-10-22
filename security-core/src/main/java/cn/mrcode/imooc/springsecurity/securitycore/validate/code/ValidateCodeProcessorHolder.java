@@ -13,6 +13,15 @@ import java.util.Map;
  */
 @Component
 public class ValidateCodeProcessorHolder {
+
+    /**
+     * <pre>
+     * 收集系统中所有 {@link ValidateCodeProcessor} 接口的实现
+     * spring开发技巧-依赖查找：
+     *  spring会查找所有ValidateCodeGenerate的实现
+     *  beanName做为key，实现作为value注入这里
+     * </pre>
+     */
     @Autowired
     private Map<String, ValidateCodeProcessor> validateCodeProcessors;
 

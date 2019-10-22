@@ -35,7 +35,7 @@ MySQL Workbench 官方客户端；sql客户端
   - [图片验证码](/chapter/imooc/spring_security/security/图片验证码.md)
   - [图片验证码重构](/chapter/imooc/spring_security/security/图片验证码重构.md)
   - [添加记住我功能](/chapter/imooc/spring_security/security/添加记住我功能.md)
-  - [短信验证码接口发送](/chapter/imooc/spring_security/security/短信验证码接口发送.md)
+  - [短信验证码接口开发](/chapter/imooc/spring_security/security/短信验证码接口发送.md)
   - [短信登录开发](/chapter/imooc/spring_security/security/短信登录开发.md)
   - [短信登录配置及重构](/chapter/imooc/spring_security/security/短信登录配置及重构.md)
   - [小结](/chapter/imooc/spring_security/security/小结.md)
